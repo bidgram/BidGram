@@ -1,0 +1,9 @@
+Building Bidgram
+
+See doc/readme-qt.rst for instructions on building Bidgram-QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Bidgram.
+
+See doc/build-*.txt for instructions on building luckycoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Bidgram.
