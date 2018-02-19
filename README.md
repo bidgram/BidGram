@@ -7,7 +7,7 @@ Bidgram - a fork of Litecoin version. Like Litecoin it uses scrypt as a proof of
    - Difficulty retargets every day with accelerated diff adjustment in the beginning
    - Initially 1 coins per block, halves every 100,000 blocks
    - Total around 30 millions coins
-   - connection port is 17666, RPC-port 18236
+   - connection port is 16661, RPC-port 18236
 
 
 

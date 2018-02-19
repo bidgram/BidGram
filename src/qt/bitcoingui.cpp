@@ -330,8 +330,8 @@ void BitcoinGUI::createMenuBar()
     settings->addAction(optionsAction);
 
     QMenu *help = appMenuBar->addMenu(tr("&Help"));
-    help->addAction(openRPCConsoleAction);
-    help->addSeparator();
+    // help->addAction(openRPCConsoleAction);
+    // help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
 }

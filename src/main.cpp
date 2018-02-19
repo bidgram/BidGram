@@ -33,7 +33,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x80ed5016f9bbb93f685ae50c8c360465d4477ed56114157e0b33dd65b3e0e631");
+uint256 hashGenesisBlock("0x3674e3b76a74bb50eba64e99a27b4bd0e516916e3e1cd51817bb1ed5b9bfbb11");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Bidgram: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2043,11 +2043,11 @@ bool LoadBlockIndex(bool fAllowNew)
 {
     if (fTestNet)
     {
-        pchMessageStart[0] = 0xd5;
+        pchMessageStart[0] = 0xd1;
         pchMessageStart[1] = 0xc4;
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
-        hashGenesisBlock = uint256("0x80ed5016f9bbb93f685ae50c8c360465d4477ed56114157e0b33dd65b3e0e631");
+        hashGenesisBlock = uint256("0x3674e3b76a74bb50eba64e99a27b4bd0e516916e3e1cd51817bb1ed5b9bfbb11");
     }
 
     //
@@ -2077,7 +2077,7 @@ bool LoadBlockIndex(bool fAllowNew)
 		//   vMerkleTree: 6f80efd038 
 
         // Genesis block
-        const char* pszTimestamp = "Bidgram Best Coin. Salt: soqu5rahpei7je6ovoh6ahs4eexohy3ea0aef9chi7veiGhee5quohGhie2Aighami6aiThohchaineceeyawaeTh7beij5ieh2raewei1Ong7wubi4EiBae0jien4u";
+        const char* pszTimestamp = "Bidgram Best Coin. Salt: eiL5ciliehiyoocohm5uo6nue7zu7eithow3FaiZoe6woh2mahcheeV4thohNgohfah5Ohqu8oohie4cho5Eitohso1Ulaigh1cheiMahz1aif7sae9zeen2be";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2089,14 +2089,14 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1518971583;
+        block.nTime    = 1519062614;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 2762419;
+        block.nNonce   = 2331637;
 
         if (fTestNet)
         {
-            block.nTime    = 1518971583;
-            block.nNonce   = 2762419;
+            block.nTime    = 1519062614;
+            block.nNonce   = 2331637;
         }
 
         //// debug print
@@ -2104,7 +2104,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
         
-        assert(block.hashMerkleRoot == uint256("0x33d68c75dd56dc947861c79993477c30f71690acce2dae78ebd230240af8cea3"));
+        assert(block.hashMerkleRoot == uint256("0x0c3bc1348e719e7ee419631fa13b43c4dd0cba2deb9be34777dc1d4f603df705"));
 
         // If genesis block hash does not match, then generate new genesis hash.
         if (true && block.GetHash() != hashGenesisBlock)
